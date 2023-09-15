@@ -38,7 +38,7 @@ void	ft_print_comb2(void)
 			put_number(b);
 			if (a != 98)
 			{
-				write(1, ", ", 1);
+				write(1, ", ",2);
 			}
 			b++;
 		}

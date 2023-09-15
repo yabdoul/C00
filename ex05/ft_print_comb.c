@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-
 void	ft_print_comb(void)
 
 {
@@ -19,23 +18,20 @@ void	ft_print_comb(void)
 	int	b;
 	int	c;
 
-	a = 48;
-	b = 48;
-	c = 48;
-	while (a <= 7 + 48)
+	a = '0';
+	while (a <= '7')
 	{
 		b = a + 1;
-		while (b <= 8 + 48)
+		while (b <= '8')
 		{
 			c = b + 1;
-			while (c <= 9 + 48)
+			while (c <= '9')
 			{
 				write(1, & a, 1);
 				write(1, & b, 1);
 				write(1, & c, 1);
-				if (a != 7 + 48 && b != 8 && c != 9)
-				{
-					write(2, ", ", 2);
+				if(a != '7')
+				{write(1,", ",2);				
 				}
 				c++;
 			}
@@ -43,3 +39,4 @@ void	ft_print_comb(void)
 		}
 		a = a + 1;
 	}
+}
